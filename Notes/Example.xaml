@@ -1,0 +1,29 @@
+﻿<Window x:Class="Prog_122_W23_Lecture_12_ListView.Notes.Example"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prog_122_W23_Lecture_12_ListView.Notes"
+        mc:Ignorable="d"
+        Title="Example" Height="450" Width="800">
+    <Canvas>
+        <ListView x:Name="lvObjects" d:ItemsSource="{d:SampleData ItemCount=5}" Height="270" Width="236" Canvas.Left="76" Canvas.Top="65" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}" />
+                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="Grade" DisplayMemberBinding="{Binding Grade}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="lvPlayers" d:ItemsSource="{d:SampleData ItemCount=5}" Height="270" Width="156" Canvas.Left="556" Canvas.Top="65" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="HP" DisplayMemberBinding="{Binding Hp}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Canvas>
+</Window>

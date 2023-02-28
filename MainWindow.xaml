@@ -7,23 +7,85 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas>
-        <ListView x:Name="lvObjects" d:ItemsSource="{d:SampleData ItemCount=5}" Height="270" Width="385" Canvas.Left="76" Canvas.Top="65" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <ListView x:Name="lvRaceCars" Height="310" Width="316" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="453" Canvas.Top="62" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}" />
-                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Grade" DisplayMemberBinding="{Binding Grade}"/>
+                    <!--Most important tag in List View-->
+
+                    <!--Focus on displaying the engine-->
+                    <GridViewColumn 
+                        Header="Engine" 
+                        DisplayMemberBinding="{Binding Engine}"/>
+                    <GridViewColumn 
+                        Header="Color"
+                        DisplayMemberBinding="{Binding Color}"
+                        />
+                    <GridViewColumn 
+                        Header="Tire Ware"
+                        DisplayMemberBinding="{Binding TireWare}"
+                        />
+                    <GridViewColumn 
+                        Header="Body Ware"
+                        DisplayMemberBinding="{Binding BodyWare}"
+                        />
+                    <GridViewColumn 
+                        Header="Number"
+                        DisplayMemberBinding="{Binding Number}"
+                        />
+
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lvPlayers" d:ItemsSource="{d:SampleData ItemCount=5}" Height="270" Width="156" Canvas.Left="556" Canvas.Top="65" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+
+        <ListView x:Name="lvStudent" Height="310" Width="347" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="385" Canvas.Top="62" HorizontalAlignment="Left" VerticalAlignment="Center">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="HP" DisplayMemberBinding="{Binding Hp}"/>
+                    <GridViewColumn 
+                        Header="Last Name" 
+                        DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn 
+                        Header="First Name" 
+                        DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn 
+                        Header="CSI Grade" 
+                        DisplayMemberBinding="{Binding CsiGrade}"/>
+                    <GridViewColumn 
+                        Header="Gen Ed Grade" 
+                        DisplayMemberBinding="{Binding GenEdGrade}"/>
+                    <GridViewColumn 
+                        Header="Average" 
+                        DisplayMemberBinding="{Binding Average}"/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <ListView x:Name="lvFanFiction" Height="290" Width="330" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="26" Canvas.Top="62" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Name"
+                        DisplayMemberBinding="{Binding Name}"
+                        
+                        />
+                    <GridViewColumn
+                        Header="Shirt"
+                        DisplayMemberBinding="{Binding Shirt}"
+                        
+                        />
+                    <GridViewColumn
+                        Header="Weapon"
+                        DisplayMemberBinding="{Binding Weapon}"
+                        
+                        />
+                    <GridViewColumn
+                        Header="Head"
+                        DisplayMemberBinding="{Binding Head}"
+                        
+                        />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
 
     </Canvas>
 </Window>
