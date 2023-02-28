@@ -26,14 +26,19 @@ namespace Prog_122_W23_Lecture_12_ListView
         public MainWindow()
         {
             InitializeComponent();
+            // Notes on github
+        
 
+        }
+
+        public void Example()
+        {
             PopulateObjects();
 
             listOfPlayers.Add(new Player("Will", 101));
 
             DisplayToListView<object>(listOfObjects, lvObjects);
             DisplayToListView<Player>(listOfPlayers, lvPlayers);
-
         }
 
         public void PopulateObjects()
