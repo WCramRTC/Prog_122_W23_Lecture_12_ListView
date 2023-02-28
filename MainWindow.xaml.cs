@@ -27,7 +27,7 @@ namespace Prog_122_W23_Lecture_12_ListView
         {
             InitializeComponent();
             // Notes on github
-        
+            // Notes for github Desktop
 
         }
 
